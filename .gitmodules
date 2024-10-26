@@ -1,0 +1,3 @@
+[submodule "themes/MoroccoChart"] 
+  path = themes/MoroccoChart 
+  url = https://github.com/hp46/MoroccoChart
