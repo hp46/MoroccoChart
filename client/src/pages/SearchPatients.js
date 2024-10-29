@@ -13,7 +13,7 @@ export default function SearchPatients() {
      let navigate = useNavigate(); 
 
     useEffect(() => {
-      axios.get("http://localhost:3001/patientsinfo").then((response) => {
+      axios.get("https://localhost:3001/patientsinfo").then((response) => {
         setListofPatients(response.data);
         // console.log("this is List of Patient Result")
         // console.log(response.data)

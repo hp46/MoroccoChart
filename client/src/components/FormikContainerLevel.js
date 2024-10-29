@@ -30,7 +30,7 @@ const initialValues = {
 
 
 const onSubmit = (data) => {
-    axios.post("http://localhost:3001/levels", data).then((response) => {
+    axios.post("https://localhost:3001/levels", data).then((response) => {
         console.log(response.data)
     })
     setOpen(true);
@@ -38,11 +38,11 @@ const onSubmit = (data) => {
 }
 
 useEffect(() => {
-    axios.get(`http://localhost:3001/patientsinfo/byId/${id}`).then((response) => {
+    axios.get(`https://localhost:3001/patientsinfo/byId/${id}`).then((response) => {
         setPatientObject(response.data);
         console.log(response.data);
 }); 
-    axios.get(`http://localhost:3001/levels/${id}`).then((response) => {
+    axios.get(`https://localhost:3001/levels/${id}`).then((response) => {
         setlevels(response.data);
         console.log(response.data);
 }); 

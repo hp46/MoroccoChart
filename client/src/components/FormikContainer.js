@@ -65,9 +65,9 @@ function FormikContainer () {
     })
 
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/patientsinfo", data).then((response) => {
+        axios.post("https://localhost:3001/patientsinfo", data).then((response) => {
             console.log("it worked")
-            axios.get("http://localhost:3001/patientsinfo").then((response) => {
+            axios.get("https://localhost:3001/patientsinfo").then((response) => {
                 setLenght(response.data.length);
               })
             console.log("it worked")

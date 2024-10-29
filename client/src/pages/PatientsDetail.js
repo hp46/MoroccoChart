@@ -19,7 +19,7 @@ function PatientsDetail () {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/patientsinfo/byId/${id}`).then((response) => {
+        axios.get(`https://localhost:3001/patientsinfo/byId/${id}`).then((response) => {
             setPatientObject(response.data);
             console.log(response.data);
     }); 
@@ -30,7 +30,7 @@ function PatientsDetail () {
 }, []);
 
     const deletePatient = (id) => {
-        axios.delete(`http://localhost:3001/patientsinfo/${id}`)
+        axios.delete(`https://localhost:3001/patientsinfo/${id}`)
         .then(() => {
             console.log(`Deleted post with ID ${patientObject.id}`);
             navigate(`/searchPatients/`)
@@ -38,7 +38,7 @@ function PatientsDetail () {
     }
 
     const deleteLevel = (id) => {
-        axios.delete(`http://localhost:3001/levels/${id}`)
+        axios.delete(`https://localhost:3001/levels/${id}`)
         .then(()=>{
             console.log(`Deleted post with ID ${patientObject.id}`);
             setOpen(true);
